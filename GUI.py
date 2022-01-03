@@ -1,9 +1,4 @@
 import tkinter as tk
-from tkinter import ttk
-
-def aktionsf():
-    label3 = ttk.Label(root, text="Button gedrückt")
-    label3.pack()
 
 
 root = tk.Tk()
@@ -12,9 +7,11 @@ root.geometry("1000x600")
 root.resizable(width=False, height=False)
 root.configure(bg="#000056")
 
-label1 = tk.Label(root, text="Hello World", bg="green")
-label1.pack()
+headline = tk.Label(root, text="Handwritten Digits", fg="white", bg="#000056")
+headline.pack()
 
-button1 = ttk.Button(root, text="Geht los", command = aktionsf)
-button1.pack()
+canvas = tk.Canvas(root, width=100, height=100)
+canvas.create_rectangle(0,0,100,100)
+canvas.pack()
+
 root.mainloop()
